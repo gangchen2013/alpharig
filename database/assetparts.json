@@ -1,0 +1,112 @@
+{
+    "ASSETPARTS": [
+        {
+            "PutRequest": {
+                "Item": {
+                  "partsId": {
+                    "S": "p002"
+                  },
+                  "assetId": {
+                      "S": "as210"
+                  },
+                  "assetModelId": {
+                      "S": "sa-120"
+                  },
+                  "name": {
+                    "S": "空气滤芯器"
+                  },
+                  "partsNumber": {
+                    "N": "2116040177"
+                  },
+                  "orderCycle": {
+                    "S": "2 周"
+                  },
+                  "img": {
+                    "S": "s3://image1p002.png"
+                  }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                  "partsId": {
+                    "S": "p008"
+                  },
+                  "assetId": {
+                      "S": "as210"
+                  },
+                  "assetModelId": {
+                      "S": "sa-120"
+                  },
+                  "name": {
+                    "S": "油过滤器"
+                  },
+                  "partsNumber": {
+                    "N": "2605531450"
+                  },
+                  "orderCycle": {
+                    "S": "3天"
+                  },
+                  "img": {
+                    "S": "s3://image1p008.png"
+                  }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                  "partsId": {
+                    "S": "p015"
+                  },
+                  "assetId": {
+                      "S": "as210"
+                  },
+                  "assetModelId": {
+                      "S": "sa-120"
+                  },
+                  "name": {
+                    "S": "油细分离器"
+                  },
+                  "partsNumber": {
+                    "N": "2605272370"
+                  },
+                  "orderCycle": {
+                    "S": "3天"
+                  },
+                  "img": {
+                    "S": "s3://image1p015.png"
+                  }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                  "partsId": {
+                    "S": "p030"
+                  },
+                  "assetId": {
+                      "S": "as310"
+                  },
+                  "assetModelId": {
+                      "S": "sa-330"
+                  },
+                  "name": {
+                    "S": "空滤压差开关"
+                  },
+                  "partsNumber": {
+                    "N": "2605272375"
+                  },
+                  "orderCycle": {
+                    "S": "3天"
+                  },
+                  "img": {
+                    "S": "s3://image1p030.png"
+                  }
+                }
+            }
+        }
+    ]
+}

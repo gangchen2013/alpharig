@@ -4,7 +4,15 @@
            {
             "AttributeName": "partsId",
             "AttributeType": "S"
-           }
+          },
+          {
+           "AttributeName": "assetId",
+           "AttributeType": "S"
+          },
+         {
+          "AttributeName": "assetModelId",
+          "AttributeType": "S"
+        }
     ],
     "ProvisionedThroughput": {
             "WriteCapacityUnits": 5,

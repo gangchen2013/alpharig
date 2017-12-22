@@ -27,6 +27,7 @@ echo "table created"
 
 # CREATE ASSETPARTS TABLE
 aws dynamodb create-table --cli-input-json file://assetparts-ddb.json --region cn-north-1
+aws dynamodb create-table --cli-input-json file://assetparts-ddb.json --region cn-north-1 --global-secondary-indexes IndexName=partsByAssetModel,KeySchema=["{AttributeName=assetId,KeyType=HASH}","{AttributeName=assetModelId,KeyType=RANGE}"],Projection="{ProjectionType=ALL}",ProvisionedThroughput="{ReadCapacityUnits=5,WriteCapacityUnits=5}"
 aws dynamodb wait table-exists --table-name ASSETPARTS
 echo "table created"
 
@@ -37,3 +38,7 @@ aws dynamodb batch-write-item --request-items file://drilling.json
 aws dynamodb batch-write-item --request-items file://assets.json
 
 aws dynamodb batch-write-item --request-items file://assetmaintenance.json
+
+aws dynamodb batch-write-item --request-items file://assetdiagnosis.json
+
+aws dynamodb batch-write-item --request-items file://assetparts.json
