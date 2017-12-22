@@ -1,0 +1,19 @@
+{
+    "AttributeDefinitions": [
+           {
+            "AttributeName": "drillrigId",
+            "AttributeType": "S"
+           }
+    ],
+    "ProvisionedThroughput": {
+            "WriteCapacityUnits": 5,
+            "ReadCapacityUnits": 5
+    },
+    "TableName": "DRILLRIG",
+    "KeySchema": [
+        {
+            "AttributeName": "drillrigId",
+            "KeyType": "HASH"
+        }
+    ]
+}

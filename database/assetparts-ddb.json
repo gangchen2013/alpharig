@@ -1,0 +1,20 @@
+
+{
+    "AttributeDefinitions": [
+           {
+            "AttributeName": "partsId",
+            "AttributeType": "S"
+           }
+    ],
+    "ProvisionedThroughput": {
+            "WriteCapacityUnits": 5,
+            "ReadCapacityUnits": 5
+    },
+    "TableName": "ASSETPARTS",
+    "KeySchema": [
+        {
+            "AttributeName": "partsId",
+            "KeyType": "HASH"
+        }
+    ]
+}

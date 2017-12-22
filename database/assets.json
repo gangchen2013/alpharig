@@ -1,0 +1,112 @@
+{
+    "DRILLRIGASSET": [
+        {
+            "PutRequest": {
+                "Item": {
+                    "assetId": {
+                        "S": "as210"
+                    },
+                    "assetModelId": {
+                        "S": "sa-120"
+                    },
+                    "assetName": {
+                        "S": "空压机"
+                    },
+                    "manufacturer":
+                    {
+                      "M":
+                          {
+                            "phoneNum":
+                            {
+                              "N": "1234567898"
+                            },
+                            "webChat":
+                            {
+                              "S": "fsenwebchat"
+                            }
+                          }
+                    },
+                    "manual":
+                    {
+                      "S": "s3://fenshengmenu120.pdf"
+                    },
+                    "drillrigId": {
+                        "S": "rig210"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "assetId": {
+                        "S": "as310"
+                    },
+                    "assetModelId": {
+                        "S": "sa-330"
+                    },
+                    "assetName": {
+                        "S": "泥浆泵"
+                    },
+                    "manufacturer":
+                    {
+                      "M":
+                          {
+                            "phoneNum":
+                            {
+                              "N": "1234567898"
+                            },
+                            "webChat":
+                            {
+                              "S": "fsenwebchat"
+                            }
+                          }
+                    },
+                    "manual":
+                    {
+                      "S": "s3://fenshengmenu330.pdf"
+                    },
+                    "drillrigId": {
+                        "S": "rig210"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "assetId": {
+                        "S": "pump1200"
+                    },
+                    "assetModelId": {
+                        "S": "pa-330"
+                    },
+                    "assetName": {
+                        "S": "泥浆泵"
+                    },
+                    "manufacturer":
+                    {
+                      "M":
+                          {
+                            "phoneNum":
+                            {
+                              "N": "1234567898"
+                            },
+                            "webChat":
+                            {
+                              "S": "fsenwebchat"
+                            }
+                          }
+                    },
+                    "manual":
+                    {
+                      "S": "s3://fenshengmenu330.pdf"
+                    },
+                    "drillrigId": {
+                        "S": "rig310"
+                    }
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,28 @@
+{
+    "DRILLRIG": [
+        {
+            "PutRequest": {
+                "Item": {
+                    "drillrigId": {
+                        "S": "rig210"
+                    },
+                    "userId": {
+                        "S": "wang123"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "drillrigId": {
+                        "S": "rig310"
+                    },
+                    "userId": {
+                        "S": "wang123"
+                    }
+                }
+            }
+        }
+    ]
+}

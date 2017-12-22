@@ -1,0 +1,32 @@
+
+{
+    "AttributeDefinitions": [
+           {
+            "AttributeName": "assetId",
+            "AttributeType": "S"
+           },
+          {
+           "AttributeName": "assetModelId",
+           "AttributeType": "S"
+         },
+         {
+           "AttributeName": "drillrigId",
+           "AttributeType": "S"
+         }
+    ],
+    "ProvisionedThroughput": {
+            "WriteCapacityUnits": 5,
+            "ReadCapacityUnits": 5
+    },
+    "TableName": "DRILLRIGASSET",
+    "KeySchema": [
+        {
+            "AttributeName": "assetId",
+            "KeyType": "HASH"
+        },
+        {
+            "AttributeName": "assetModelId",
+            "KeyType": "RANGE"
+        }
+    ]
+}
