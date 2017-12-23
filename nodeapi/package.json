@@ -3,8 +3,8 @@
 	"version": "0.0.1",
 	"description": "perform DynamoDB crud operation",
 	"scripts": {
-    "start": "forever start app.js",
-    "stop": "forever stopall"
+		"start": "node app.js",
+		"stop": "stopall"
 	},
 	"directories": {
 		"test": "test"
