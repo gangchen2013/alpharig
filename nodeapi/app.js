@@ -36,8 +36,8 @@ router.use(function(req, res, next) {
 */
 
 //Set up API routes
-router.use('/api/rigs', require('./routes/drillingrig.js'))
-//router.use('/cars', require('./cars'))
+router.use('/api/rigs', require('./routes/drillingrig.js'));
+router.use('/api/assets', require('./routes/assets.js'));
 
 http.createServer(app).listen(app.get('port'), function() {
 	console.log('Express server listening on port ' + app.get('port'));

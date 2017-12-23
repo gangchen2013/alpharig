@@ -6,27 +6,30 @@ var express = require('express')
 //  , fs = require('fs');
 
 //var docClient = db.DocumentClient;
-var table = "DRILLRIG";
+var table = "DRILLRIGASSET";
+var indexName = "assetsByRigId";
 
 // Quick health check API
 router.get('/health', function(req, res) {
+  res.setHeader('Content-Type', 'application/json');
   res.json({
     status: "ok"
   });
 })
 
-router.get('/info', function(req, res) {
-  //console.log(JSON.stringify(db));
+// Return all items for a drillrigId
+router.get('/rig', function(req, res) {
 
-  console.log("Input userid is: " + req.query.userId);
-  var userId = req.query.userId;
+  console.log("Input rigId is: " + req.query.drillrigId);
+  var drillrigId = req.query.drillrigId;
   var params = {
       TableName: table,
-      KeyConditionExpression: "userId = :input",
-      ExpressionAttributeValues: { ":input": userId}
+      IndexName: indexName,
+      KeyConditionExpression: "drillrigId = :input",
+      ExpressionAttributeValues: { ":input": drillrigId}
   };
 
-  var rigsResponse;
+  var assetsResponse;
   res.setHeader('Content-Type', 'application/json');
 
   async.series([
@@ -37,16 +40,16 @@ router.get('/info', function(req, res) {
           if (err) {
               console.error("Unable to read item. Error JSON:", JSON.stringify(err, null, 2));
           } else {
-              console.log("GetRig succeeded:", JSON.stringify(data, null, 2));
-              rigsResponse = data.Items;
+              console.log("Get assets succeeded:", JSON.stringify(data, null, 2));
+              assetsResponse = data.Items;
               callback();
           }
         });
 
       }],
       function(err, results) {
-        console.log("Write resposne" + JSON.stringify(rigsResponse));
-        res.send(JSON.stringify(rigsResponse));
+        console.log("Write resposne" + JSON.stringify(assetsResponse));
+        res.send(JSON.stringify(assetsResponse));
       });
 
 });
