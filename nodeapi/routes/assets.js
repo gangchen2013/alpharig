@@ -54,15 +54,19 @@ router.get('/rig', function(req, res) {
 
 });
 
-router.post('/info', function(req, res) {
+router.post('/', function(req, res) {
   //console.log(JSON.stringify(db));
 
   console.log("Input data is: " + JSON.stringify(req.body));
   var params = {
       TableName: table,
       Item: {
-                "userId": req.body.userId,
-                "drillrigId": req.body.drillrigId
+                "assetId": req.body.assetId,
+                "assetModelId": req.body.assetModelId,
+                "assetName": req.body.assetName,
+                "drillrigId": req.body.drillrigId,
+                "manual": req.body.manual,
+                "manufacturer": req.body.manufacturer
               }
   };
 
@@ -77,7 +81,7 @@ router.post('/info', function(req, res) {
           if (err) {
               console.error("Unable to read item. Error JSON:", JSON.stringify(err, null, 2));
           } else {
-              console.log("PutRig succeeded:", JSON.stringify(data, null, 2));
+              console.log("PutAssets succeeded:", JSON.stringify(data, null, 2));
               //rigsResponse = data.Items;
               callback();
           }
