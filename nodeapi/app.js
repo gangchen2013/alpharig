@@ -6,11 +6,6 @@ var express = require('express'), router = express.Router(),
 	fs = require('fs'), bodyParser = require('body-parser');
 
 var app = express();
-app.set('base', '/api');
-
-var dbCredentials = {
-	dbName: 'tasks'
-};
 
 // all environments
 app.set('port', process.env.PORT || 3000);
@@ -19,7 +14,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(router);
 app.use(express.static(path.join(__dirname, 'public')));
 
-AWS.config.loadFromPath('./config.json');
+//AWS.config.loadFromPath('./config.json');
+
 // simple logger for this router's requests
 // all requests to this router will first hit this middleware
 router.use(function(req, res, next) {

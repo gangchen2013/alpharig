@@ -25,6 +25,8 @@ router.get('/info', function(req, res) {
   };
 
   var rigsResponse;
+  res.setHeader('Content-Type', 'application/json');
+
   async.series([
       function(callback) {
 
@@ -34,7 +36,7 @@ router.get('/info', function(req, res) {
               console.error("Unable to read item. Error JSON:", JSON.stringify(err, null, 2));
           } else {
               console.log("GetRig succeeded:", JSON.stringify(data, null, 2));
-              rigsResponse = data;
+              rigsResponse = data.Items;
               callback();
           }
         });
