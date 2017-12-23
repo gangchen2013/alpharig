@@ -1,0 +1,21 @@
+{
+	"name": "alpharig_api_app",
+	"version": "0.0.1",
+	"description": "perform DynamoDB crud operation",
+	"scripts": {
+		"start": "node app.js"
+	},
+	"directories": {
+		"test": "test"
+	},
+	"dependencies": {
+		"async": "^2.6.0",
+		"aws-sdk": "*",
+		"body-parser": "1.9.x",
+		"chai": "^3.4.1",
+		"express": "4.12.x",
+		"mocha": "^2.3.4",
+		"request": "*"
+	},
+	"repository": {}
+}

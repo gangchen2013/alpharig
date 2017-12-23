@@ -3,23 +3,24 @@
         {
             "PutRequest": {
                 "Item": {
+                  "userId": {
+                      "S": "wang123"
+                  },
                     "drillrigId": {
                         "S": "rig210"
-                    },
-                    "userId": {
-                        "S": "wang123"
                     }
+
                 }
             }
         },
         {
             "PutRequest": {
                 "Item": {
+                    "userId": {
+                        "S": "chen123"
+                    },
                     "drillrigId": {
                         "S": "rig310"
-                    },
-                    "userId": {
-                        "S": "wang123"
                     }
                 }
             }

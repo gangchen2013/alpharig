@@ -1,7 +1,7 @@
 {
     "AttributeDefinitions": [
            {
-            "AttributeName": "drillrigId",
+            "AttributeName": "userId",
             "AttributeType": "S"
            }
     ],
@@ -12,7 +12,7 @@
     "TableName": "DRILLRIG",
     "KeySchema": [
         {
-            "AttributeName": "drillrigId",
+            "AttributeName": "userId",
             "KeyType": "HASH"
         }
     ]
