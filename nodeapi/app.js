@@ -10,6 +10,7 @@ var app = express();
 // all environments
 app.set('port', process.env.PORT || 3000);
 app.set('json spaces', 2);
+app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(router);
 app.use(express.static(path.join(__dirname, 'public')));

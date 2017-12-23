@@ -47,8 +47,44 @@ router.get('/info', function(req, res) {
         res.send(JSON.stringify(rigsResponse));
       });
 
+});
 
-})
+router.post('/info', function(req, res) {
+  //console.log(JSON.stringify(db));
+
+  console.log("Input data is: " + JSON.stringify(req.body));
+  var params = {
+      TableName: table,
+      Item: {
+                "userId": req.body.userId,
+                "drillrigId": req.body.drillrigId
+              }
+  };
+
+  //var rigsResponse;
+  res.setHeader('Content-Type', 'application/json');
+
+  async.series([
+      function(callback) {
+
+        //Query Database
+        db.put(params, function(err, data) {
+          if (err) {
+              console.error("Unable to read item. Error JSON:", JSON.stringify(err, null, 2));
+          } else {
+              console.log("PutRig succeeded:", JSON.stringify(data, null, 2));
+              //rigsResponse = data.Items;
+              callback();
+          }
+        });
+
+      }],
+      function(err, results) {
+        console.log("Write resposne" + JSON.stringify(results));
+        res.send(JSON.stringify({"putSuccess": true}));
+      });
+
+});
 
 
 module.exports = router
