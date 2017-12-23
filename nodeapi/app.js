@@ -2,7 +2,7 @@
 
 
 var express = require('express'), router = express.Router(),
-	http = require('http'), path = require('path'),
+	http = require('http'), path = require('path'), AWS = require("aws-sdk"),
 	fs = require('fs'), bodyParser = require('body-parser');
 
 var app = express();
@@ -19,6 +19,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(router);
 app.use(express.static(path.join(__dirname, 'public')));
 
+AWS.config.loadFromPath('./config.json');
 // simple logger for this router's requests
 // all requests to this router will first hit this middleware
 router.use(function(req, res, next) {
