@@ -40,6 +40,7 @@ router.use('/api/rigs', require('./routes/drillingrig.js'));
 router.use('/api/assets', require('./routes/assets.js'));
 router.use('/api/maintenance', require('./routes/maintenance.js'));
 router.use('/api/diagnosis', require('./routes/diagnosis.js'));
+router.use('/api/parts', require('./routes/assetparts.js'));
 
 http.createServer(app).listen(app.get('port'), function() {
 	console.log('Express server listening on port ' + app.get('port'));
