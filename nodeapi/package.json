@@ -4,7 +4,7 @@
 	"description": "perform DynamoDB crud operation",
 	"scripts": {
 		"start": "node app.js",
-		"stop": "stopall"
+		"stop": "pkill -f node"
 	},
 	"directories": {
 		"test": "test"
