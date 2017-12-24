@@ -18,7 +18,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 //Define the securitry routing
 router.use('/api/authenticate', require('./routes/authentication.js'));
-
+// Quick health check API
+router.get('/api/health', function(req, res) {
+  res.setHeader('Content-Type', 'application/json');
+  res.json({
+    status: "ok"
+  });
+})
 
 //AWS.config.loadFromPath('./config.json');
 
