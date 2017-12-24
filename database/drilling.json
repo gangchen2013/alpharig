@@ -6,6 +6,9 @@
                   "userId": {
                       "S": "wang123"
                   },
+                  "passwd": {
+                      "S": "superpw"
+                  },
                     "drillrigId": {
                         "S": "rig210"
                     }
@@ -18,6 +21,9 @@
                 "Item": {
                     "userId": {
                         "S": "chen123"
+                    },
+                    "passwd": {
+                        "S": "superpw"
                     },
                     "drillrigId": {
                         "S": "rig310"

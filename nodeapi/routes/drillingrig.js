@@ -59,6 +59,7 @@ router.post('/info', function(req, res) {
       TableName: table,
       Item: {
                 "userId": req.body.userId,
+                "passwd": req.body.passwd,
                 "drillrigId": req.body.drillrigId
               }
   };
