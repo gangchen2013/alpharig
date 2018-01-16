@@ -48,7 +48,7 @@ router.get('/asset', function(req, res) {
       }],
       function(err, results) {
         console.log("Write resposne" + JSON.stringify(maintenanceResponse));
-        res.send(JSON.stringify(maintenanceResponse));
+        res.send(JSON.stringify(maintenanceResponse[0]));
       });
 
 });
