@@ -68,6 +68,7 @@ router.post('/', function(req, res) {
             const payload = {
               userId: authResponse.userId
             };
+            rigId = authResponse.drillrigId;
                 var token = jwt.sign(payload, config.secret, {
                   expiresIn: 86400 // expires in 24 hours
                 });
@@ -76,6 +77,7 @@ router.post('/', function(req, res) {
                 res.json({
                   success: true,
                   message: 'User Authenticated!',
+                  drillrigId: rigId,
                   token: token
                 });
               }
