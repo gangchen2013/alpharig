@@ -16,6 +16,7 @@
 		"chai": "^3.4.1",
 		"express": "4.12.x",
 		"jsonwebtoken": "^8.1.0",
+		"lodash": "^4.17.4",
 		"mocha": "^2.3.4",
 		"request": "*"
 	},

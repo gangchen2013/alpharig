@@ -28,7 +28,11 @@
                     },
                     "manual":
                     {
-                      "S": "s3://fenshengmenu120.pdf"
+                      "S": "manual_compressor.pdf"
+                    },
+                    "image":
+                    {
+                      "S": "aircompressor.jpeg"
                     },
                     "drillrigId": {
                         "S": "rig210"
@@ -64,7 +68,51 @@
                     },
                     "manual":
                     {
-                      "S": "s3://fenshengmenu330.pdf"
+                      "S": "manual_compressor.pdf"
+                    },
+                    "image":
+                    {
+                      "S": "pump.jpeg"
+                    },
+                    "drillrigId": {
+                        "S": "rig210"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "assetId": {
+                        "S": "as410"
+                    },
+                    "assetModelId": {
+                        "S": "ta-200"
+                    },
+                    "assetName": {
+                        "S": "发电机"
+                    },
+                    "manufacturer":
+                    {
+                      "M":
+                          {
+                            "phoneNum":
+                            {
+                              "N": "1234567898"
+                            },
+                            "webChat":
+                            {
+                              "S": "great power"
+                            }
+                          }
+                    },
+                    "manual":
+                    {
+                      "S": "manual_compressor.pdf"
+                    },
+                    "image":
+                    {
+                      "S": "generator.jpeg"
                     },
                     "drillrigId": {
                         "S": "rig210"
@@ -100,7 +148,11 @@
                     },
                     "manual":
                     {
-                      "S": "s3://fenshengmenu330.pdf"
+                      "S": "manual_compressor.pdf"
+                    },
+                    "image":
+                    {
+                      "S": "pump.jpeg"
                     },
                     "drillrigId": {
                         "S": "rig310"
